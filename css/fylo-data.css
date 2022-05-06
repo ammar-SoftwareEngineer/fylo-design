@@ -1,0 +1,293 @@
+:root {
+    --main-color: hsl(228, 56%, 26%);
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* mobile */
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* start header */
+/* end header */
+header .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    width: 100%;
+}
+
+@media(max-width:767px) {
+    body {
+        background-image: url("../images/bg-mobile.png");
+        background-size: cover;
+    }
+
+}
+
+/* start fylo */
+.fylo {
+    background-color: var(--main-color);
+    padding: 30px 40px;
+    width: 300px;
+    border-radius: 5px 90px 5px 5px;
+    max-width: 100%;
+}
+
+.fylo .logo img {
+    width: 120px;
+    height: 100%;
+
+}
+
+.images-fylo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.images-fylo .one {
+    background-color: hsl(229, 57%, 11%);
+    padding: 10px 13px;
+    border-radius: 12px;
+}
+
+.images-fylo .two {
+    background-color: hsl(229, 57%, 11%);
+    margin-left: 10px;
+    border-radius: 12px;
+    padding: 12px 13px;
+
+}
+
+.images-fylo .three {
+    background-color: hsl(229, 57%, 11%);
+    margin-left: 10px;
+    border-radius: 12px;
+    padding: 13px 13px;
+}
+
+@media(max-width:767px) {
+    .fylo {
+        margin-bottom: 120px;
+        padding: 40px 40px;
+    }
+
+    .fylo .logo img {
+        width: 130px;
+        margin-bottom: 10px;
+    }
+}
+
+/* end fylo */
+/* start storage */
+.storage {
+    margin-top: 50px;
+    background-color: var(--main-color);
+    padding: 20px;
+    height: 120px;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.storage .box p {
+    color: hsl(243, 100%, 93%);
+}
+
+.storage .box p span {
+    font-weight: bold;
+}
+
+.prog {
+    position: relative;
+}
+
+.prog h2 {
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    left: 73%;
+    top: -100%;
+    transform: translateY(-100%);
+    padding: 10px;
+    border-radius: 5px;
+}
+.prog h2 span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+}
+.prog h2::before {
+    content: "GB LEFT";
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: hsl(229, 7%, 55%);
+}
+
+.prog h2::after {
+    content: "";
+    position: absolute;
+    border-color: transparent white transparent transparent;
+    border-width: 15px;
+    border-style: solid;
+    top: 70%;
+    left: 75%;
+}
+
+.prog .data {
+    margin-top: 15px;
+    height: 15px;
+    margin-left: 3px;
+    background-color: hsl(229, 62%, 21%);
+    border-radius: 50px;
+    position: relative;
+}
+
+.prog .data-pro {
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: block;
+    height: 75%;
+    border-radius: 50px;
+    position: absolute;
+    top: 15%;
+    margin-left: 2px;
+}
+
+.prog .data-pro::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-45%);
+}
+
+.prog p {
+    margin-top: 10px;
+    color: hsl(243, 100%, 93%);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.prog .text {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:767px) {
+    .storage {
+        margin-top: -100px;
+        height: 130px;
+        width: 300px;
+    }
+
+    .storage .box p {
+        color: hsl(243, 100%, 93%);
+        font-size: 14px;
+        text-align: center;
+    }
+    .prog .data-pro {
+        top: 13%;
+    }
+
+    .prog .data-pro::after {
+        transform: translateY(-55%);
+    }
+
+    .prog h2::after {
+        display: none;
+    }
+
+    .prog h2 {
+        background-color: white;
+        width: 165px;
+        height: 60px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 20%);
+        padding: 35px;
+        border-radius: 10px;
+    }
+    
+    .prog h2::before {
+        content: "GB LEFT";
+        position: absolute;
+        left: 55%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 13px;
+        color: hsl(229, 7%, 55%);
+    }
+
+    .prog h2 span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+}
+
+/* end storage */
